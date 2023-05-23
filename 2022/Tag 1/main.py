@@ -11,16 +11,13 @@ for line in cal:
             calories_per_elf[count].append(int(line))
         else:
             calories_per_elf[count] = [int(line)]
-        # print(calories_per_elf[count])
     else:
         count += 1
 sum_calories_per_elf = dict([(key, sum(values)) for key, values in calories_per_elf.items()])
-# print(sum_calories_per_elf)
 max_key = max(sum_calories_per_elf, key=sum_calories_per_elf.get)
 print(sum_calories_per_elf[max_key])
 
 # Teil 2
-
 calories_part_two = copy.deepcopy(sum_calories_per_elf)
 top_three_elves = []
 while len(top_three_elves) < 3:
