@@ -7,6 +7,7 @@ uter = [int(i) for i in uter]
 uter[1] = 12
 uter[2] = 2
 a = 0
+
 while True:
     opcode = uter[a]
     if opcode == 1:
